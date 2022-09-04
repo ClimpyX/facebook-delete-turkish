@@ -1,35 +1,35 @@
-# Fast Facebook Activity Deletion
+# Hızlıca Facebook Etkinliğizi Silin
 
-This program can be used to clean up a Facebook account without deleting the entire account.
+Bu programı, tüm hesabınızı silmeden Facebook hesabınızdaki datalarınızı temizlemek için kullanılabilirsiniz.
 
-_Warning: Facebook has some measures in place to prevent high-frequency activity such as the one this tool provides. The current rate limit value has currently been set to 100 ms to avoid detection, but the delay might not be enough and this could still result in your activity log getting temporarily blocked. Please check out the [Rate-limiting](#rate-limiting) section if you want to increase/decrease this delay._
+_Uyarı: Facebook, bu aracın sağladığı gibi yüksek hızda etkinlikleri önlemek için bazı önlemlere sahiptir. Mevcut hız sınır değeri, algılamayı önlemek için şu anda 100 ms'ye ayarlanmıştır, ancak gecikme yeterli olmayabilir. Bu etkinlik günlüğünüzün geçici olarak engellenmesine neden olabilir. Bu gecikmeyi artırmak/azaltmak istiyorsanız lütfen [Hız sınırlama](#hız-sınırlama) bölümüne bakın._
 
-_Note: Facebook has a very strange login process. Please open a GitHub issue if the program is not able to login. Here's a [workaround for the login process](https://github.com/marcelja/facebook-delete/wiki/Login-with-browser-cookie) which you can also use if your account has two-factor authentication enabled._
+_Not: Facebook'un çok tuhaf bir giriş süreci var. Program giriş yapamıyorsa lütfen bir GitHub 'da bize bir issue açın. Eğer hesabınızda iki faktörlü kimlik doğrulama etkinse kullanabileceğiniz bir geçici çözüm: (https://github.com/marcelja/facebook-delete/wiki/Login-with-browser-cookie)._
 
 ![Demo](demo.gif)
 
-## Run program
+## Program nasıl çalıştırılır?
 
-Binaries for Linux, macOS and Windows are attached to a release.
+Linux, macOS ve Windows için dosyalar bir release olarak eklenmiştir.
 
-### Download binary
+### Binary olarak indirin
 
-Download the binary file for your platform of the [latest release](https://github.com/marcelja/facebook-delete/releases).
+Kullandığınız platform için "binary" dosyayı indirin [latest release](https://github.com/marcelja/facebook-delete/releases).
 
-Linux/macOS: Make the binary executable and run it. Example:
+Linux/macOS: "Binary" dosyayı yürütülebilir yapın ve çalıştırın. Örnek:
 
 ```bash
 chmod +x deleter-linux
 ./deleter-linux
 ```
 
-Windows: Run the .exe file and select "More information" and "Run anyway".
+Windows: Mevcut .exe dosyasını çalıştırın ve "Yine de çalıştır" 'a dokunun.
 
-### From source
+### Kaynaktan indirin
 
-A recent [Go](https://golang.org/) version needs to be installed. This can be done via your package manager or the golang website.
+Son [Go](https://golang.org/) Go versiyonu yüklü olmadıdır. Paket yöneticisi veya golang web sitesi aracılığıyla indirebilirsiniz.
 
-#### Clone this repository
+#### Kaynağı klonlayarak indirin
 
 ```bash
 git clone https://github.com/marcelja/facebook-delete.git
@@ -38,17 +38,17 @@ go install
 go run deleter.go
 ```
 
-## Cookies
+## Çerezler (Cookies)
 
-Cookies are saved to `$HOME/.go-cookies` if the `$GOCOOKIES` variable is not set (see <https://github.com/juju/persistent-cookiejar>).
+Eğer `$GOCOOKIES` değeri ayarlanmadıysa, mevcut çerezler `$HOME/.go-cookies` 'e kayıt olacaktır. (bknz: <https://github.com/juju/persistent-cookiejar>).
 
-## Options
+## Ayarlar
 
-### Rate-limiting
+### Hız-sınırlama
 
-Facebook will temp-block your activity log if you make too many requests too quickly. Run the command with the `-rateLimit <time in ms>` to introduce a custom delay before each request. If you're getting hung up on just searches or deletes, you can disable rate-limiting for one or the other with `-limitSearch=0` or `-limitDelete=0`.
+Çok fazla istekte bulunursanız, Facebook aktivite günlüğünüzü geçici olarak engeller. Her istekten önce özel bir gecikme eklemek için konsola `-rateLimit <time in ms>` kullanarak çalıştırın. Yalnızca arama veya silme işlemlerine takılıp kalıyorsanız, `-limitSearch=0` veya `-limitDelete=0` ile biri veya diğeri için hız sınırlamasını devre dışı bırakabilirsiniz.
 
-Usage examples:
+Kullanım örnekleri:
 
 ```bash
 ./deleter-linux -rateLimit 500 # Add a 500 ms delay
@@ -56,14 +56,14 @@ Usage examples:
 ./deleter-linux -rateLimit 500 -limitDelete=0 # Add a 500 ms delay, but not to deletion action
 ```
 
-### Selection via flags
+### "Flag" 'ler aracılığıyla seçim
 
-If you want to skip the manual terminal selection, feel free to use the following flags:
+Manuel seçimi atlamak istiyorsanız, mevcut "flag" 'leri kullanmakta özgürsünüz.
 
-| Flag              | Type     | Description                                                            | Example                                                 |
-|-------------------|----------|------------------------------------------------------------------------|---------------------------------------------------------|
-| -customYears      | `string` | Comma-separated years (YYYY) to select. Use `all` to select all years. | `-customYears="2006,2009,2020"` or `-customYears="all"` |
-| -customMonths     | `string` | Comma-separated months to select. Use `all` to select all months.      | `-customMonths="1,2,12` or `-customMonths="01,02,12"`   |
-| -selectAllContent | `bool`   | If set to `true` it will select all content without asking questions.  | `-selectAllContent=true`                                |
+| Flag              | Tip      | Açıklama                                                                                       | Örnek Kullanım                                          |
+|-------------------|----------|------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| -customYears      | `string` | Seçmek için (YYYY) kullanın. Tüm yılları seçmek için "tümünü seç" 'i kullanın.                 | `-customYears="2006,2009,2020"` or `-customYears="all"` |
+| -customMonths     | `string` | Virgülle ayrılmış ayları kullanarak seçin. Tüm ayları seçmek için "tümünü seç" 'i kullanın.    | `-customMonths="1,2,12` or `-customMonths="01,02,12"`   |
+| -selectAllContent | `bool`   | Değer "true" olarak ayarlanırsa, tüm içeriği soru sormadan seçer ve işler.                     | `-selectAllContent=true`                                |
 
-_Note: if invalid arguments are passed to the flags, a warning will appear and you will be asked to perform a manual selection._
+_Note: Eğer "flag" 'leri kullanırken geçersiz argumanlar kullanırsanız, uyarı alacak ve manuel seçim yapmanız istenecektir._
