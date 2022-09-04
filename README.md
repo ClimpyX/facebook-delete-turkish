@@ -62,8 +62,8 @@ Manuel seçimi atlamak istiyorsanız, mevcut "flag" 'leri kullanmakta özgürsü
 
 | Flag              | Tip      | Açıklama                                                                                       | Örnek Kullanım                                          |
 |-------------------|----------|------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| -customYears      | `string` | Seçmek için (YYYY) kullanın. Tüm yılları seçmek için "tümünü seç" 'i kullanın.                 | `-customYears="2006,2009,2020"` or `-customYears="all"` |
-| -customMonths     | `string` | Virgülle ayrılmış ayları kullanarak seçin. Tüm ayları seçmek için "tümünü seç" 'i kullanın.    | `-customMonths="1,2,12` or `-customMonths="01,02,12"`   |
+| -customYears      | `string` | Seçmek için (YYYY) kullanın. Tüm yılları seçmek için "select all" 'ı kullanın.                 | `-customYears="2006,2009,2020"` or `-customYears="all"` |
+| -customMonths     | `string` | Virgülle ayrılmış ayları kullanarak seçin. Tüm ayları seçmek için "select all" 'ı kullanın.    | `-customMonths="1,2,12` or `-customMonths="01,02,12"`   |
 | -selectAllContent | `bool`   | Değer "true" olarak ayarlanırsa, tüm içeriği soru sormadan seçer ve işler.                     | `-selectAllContent=true`                                |
 
 _Note: Eğer "flag" 'leri kullanırken geçersiz argumanlar kullanırsanız, uyarı alacak ve manuel seçim yapmanız istenecektir._
