@@ -10,7 +10,7 @@ _Not: Facebook'un çok tuhaf bir giriş süreci var. Program giriş yapamıyorsa
 
 ## Program nasıl çalıştırılır?
 
-Linux, macOS ve Windows için dosyalar bir release olarak eklenmiştir.
+Linux, macOS ve Windows için mevcut dosyalar release olarak eklenmiştir.
 
 ### Binary olarak indirin
 
@@ -27,7 +27,7 @@ Windows: Mevcut .exe dosyasını çalıştırın ve "Yine de çalıştır" 'a do
 
 ### Kaynaktan indirin
 
-Son [Go](https://golang.org/) Go versiyonu yüklü olmadıdır. Paket yöneticisi veya golang web sitesi aracılığıyla indirebilirsiniz.
+Son [Go](https://golang.org/) versiyonu yüklü olmadıdır. Paket yöneticisi veya golang web sitesi aracılığıyla indirebilirsiniz.
 
 #### Kaynağı klonlayarak indirin
 
