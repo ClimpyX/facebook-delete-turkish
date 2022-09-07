@@ -51,9 +51,9 @@ Eğer `$GOCOOKIES` değeri ayarlanmadıysa, mevcut çerezler `$HOME/.go-cookies`
 Kullanım örnekleri:
 
 ```bash
-./deleter-linux -rateLimit 500 # Add a 500 ms delay
-./deleter-linux -rateLimit 500 -limitSearch=0 # Add a 500 ms delay, but not to search action
-./deleter-linux -rateLimit 500 -limitDelete=0 # Add a 500 ms delay, but not to deletion action
+./deleter-linux -rateLimit 500 # 500ms gecikme ekleyin
+./deleter-linux -rateLimit 500 -limitSearch=0 # 500 ms'lik bir gecikme ekler. (arama eylemi için geçerli değil)
+./deleter-linux -rateLimit 500 -limitDelete=0 # 500 ms'lik bir gecikme ekler. (silme eylemi için geçerli değil)
 ```
 
 ### "Flag" 'ler aracılığıyla seçim
