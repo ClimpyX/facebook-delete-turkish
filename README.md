@@ -46,7 +46,7 @@ Eğer `$GOCOOKIES` değeri ayarlanmadıysa, mevcut çerezler `$HOME/.go-cookies`
 
 ### Hız-sınırlama
 
-Çok fazla istekte bulunursanız, Facebook aktivite günlüğünüzü geçici olarak engeller. Her istekten önce özel bir gecikme eklemek için konsola `-rateLimit <time in ms>` kullanarak çalıştırın. Yalnızca arama veya silme işlemlerine takılıp kalıyorsanız, `-limitSearch=0` veya `-limitDelete=0` ile biri veya diğeri için hız sınırlamasını devre dışı bırakabilirsiniz.
+Çok fazla istekte bulunursanız, Facebook aktivite günlüğünüzü geçici olarak engeller. Her istekten önce özel bir gecikme eklemek için konsola `-rateLimit <ms cinsinden sure>` kullanarak çalıştırın. Yalnızca arama veya silme işlemlerine takılıp kalıyorsanız, `-limitSearch=0` veya `-limitDelete=0` ile biri veya diğeri için hız sınırlamasını devre dışı bırakabilirsiniz.
 
 Kullanım örnekleri:
 
